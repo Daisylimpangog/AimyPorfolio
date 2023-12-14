@@ -1,13 +1,13 @@
 $(document).ready(function () {
   $(window).scroll(function () {
-    // Sticky navbar on scroll script
+    // sticky navbar on scroll script
     if (this.scrollY > 20) {
       $(".navbar").addClass("sticky");
     } else {
       $(".navbar").removeClass("sticky");
     }
 
-    // Scroll-up button show/hide script
+    // scroll-up button show/hide script
     if (this.scrollY > 500) {
       $(".scroll-up-btn").addClass("show");
     } else {
@@ -15,15 +15,15 @@ $(document).ready(function () {
     }
   });
 
-  // Slide-up script
+  // slide-up script
   $(".scroll-up-btn").click(function () {
     $("html").animate({ scrollTop: 0 });
-    // Removing smooth scroll on slide-up button click
+    // removing smooth scroll on slide-up button click
     $("html").css("scrollBehavior", "auto");
   });
 
   $(".navbar .menu li a").click(function () {
-    // Applying smooth scroll again on menu items click
+    // applying again smooth scroll on menu items click
     $("html").css("scrollBehavior", "smooth");
   });
 
@@ -33,25 +33,37 @@ $(document).ready(function () {
   });
 
   var typed = new Typed(".typing", {
-    strings: ["BSIT Student", "YouTuber", "Designer", "Editor"],
+    strings: [
+      "B.Tech Student",
+      "YouTuber",
+      "Ethical Hacker",
+      "Gamer",
+      "Editor",
+    ],
     typeSpeed: 120,
     backSpeed: 60,
     loop: true,
   });
 
   var typed = new Typed(".typing-2", {
-    strings: ["BSIT Student", "YouTuber", "Designer", "Editor"],
+    strings: [
+      "B.Tech Student",
+      "YouTuber",
+      "Ethical Hacker",
+      "Gamer",
+      "Editor",
+    ],
     typeSpeed: 120,
     backSpeed: 60,
     loop: true,
   });
 
-  // Owl Carousel script
+  // owl carousel script
   $(".carousel").owlCarousel({
     margin: 20,
     loop: true,
     autoplay: true,
-    autoplayTimeout: 2000, // Note the corrected property name
+    autoplayTimeOut: 2000,
     autoplayHoverPause: true,
     responsive: {
       0: {
