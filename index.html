@@ -84,8 +84,8 @@
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-chart-line"></i>
-                        <div class="text">Editor</div>
-                        <p>
+                        <div class="text" style="font-size: 40px;">Editor</div>
+                        <p style="font-size: 15px;">
                           Photo, Editor & Designing
                         </p>
                     </div>
@@ -93,8 +93,8 @@
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-code"></i>
-                        <div class="text">Web Dev</div>
-                        <p>
+                        <div class="text" style="font-size: 40px;">Web Dev</div>
+                        <p style="font-size: 15px;">
                           Front End Developer
                         </p>
                     </div>
@@ -124,51 +124,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-        new Vue({
-            el: '#app',
-            data() {
-                return {
-                    task: "",
-                    todos: [],
-                    searchQuery: "",
-                };
-            },
-            computed: {
-                filteredTodos() {
-                    const query = this.searchQuery.toLowerCase();
-                    return this.todos.filter((todo) =>
-                        todo.details.toLowerCase().includes(query)
-                    );
-                },
-            },
-            methods: {
-                addTask() {
-                    const newTask = {
-                        id: Date.now(),
-                        details: this.task,
-                        status: false,
-                    };
-                    this.todos.unshift(newTask);
-                    this.task = "";
-                },
-                removeTask(id) {
-                    const index = this.todos.findIndex((todo) => todo.id === id);
-                    if (index !== -1) {
-                        this.todos.splice(index, 1);
-                    }
-                },
-                toggleDone(todo) {
-                    todo.status = !todo.status;
-                },
-                clearTasks() {
-                    // Clear all tasks by setting todos to an empty array
-                    this.todos = [];
-                },
-            },
-        });
-    </script>
     
 </section>
     <!-- skills section start -->
@@ -236,7 +191,7 @@
                             <i class="fas fa-user"></i>
                             <div class="info">
                                 <div class="head">Name</div>
-                                <div class="sub-title">Aimy Mata</div>
+                                <div class="sub-title">Aimy Edem Mata</div>
                             </div>
                         </div>
                         <div class="row">
@@ -250,7 +205,7 @@
                             <i class="fas fa-envelope"></i>
                             <div class="info">
                                 <div class="head">Email</div>
-                                <div class="sub-title">Aimymata]@gmail.com</div>
+                                <div class="sub-title">ma08131997@gmail.com</div>
                             </div>
                         </div>
                     </div>
@@ -283,8 +238,51 @@
 
     <!-- footer section start -->
     <footer>
-        <span>By <a href="https://www.facebook.com/">AimyMata</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
+        <span>By <a href="https://www.facebook.com/">Aimy Edem Mata</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
     </footer>
-    
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    task: "",
+                    todos: [],
+                    searchQuery: "",
+                };
+            },
+            computed: {
+                filteredTodos() {
+                    const query = this.searchQuery.toLowerCase();
+                    return this.todos.filter((todo) =>
+                        todo.details.toLowerCase().includes(query)
+                    );
+                },
+            },
+            methods: {
+                addTask() {
+                    const newTask = {
+                        id: Date.now(),
+                        details: this.task,
+                        status: false,
+                    };
+                    this.todos.unshift(newTask);
+                    this.task = "";
+                },
+                removeTask(id) {
+                    const index = this.todos.findIndex((todo) => todo.id === id);
+                    if (index !== -1) {
+                        this.todos.splice(index, 1);
+                    }
+                },
+                toggleDone(todo) {
+                    todo.status = !todo.status;
+                },
+                clearTasks() {
+                    // Clear all tasks by setting todos to an empty array
+                    this.todos = [];
+                },
+            },
+        });
+    </script>
 </body>
 </html>
